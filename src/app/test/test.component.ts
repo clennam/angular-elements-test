@@ -8,6 +8,7 @@ import * as config from "../../assets/config/property.json";
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class TestComponent implements OnInit {
+  @Input() base: string = undefined;
   @Input() test: string;
   config = config;
 

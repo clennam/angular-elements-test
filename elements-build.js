@@ -9,16 +9,16 @@ const concat = require('concat');
         './dist/angularElementsTest/main-es5.js',
     ]
 
-    await fs.ensureDir('elements')
+    await fs.ensureDir('elements/test')
 
-    await concat(files, 'elements/test-custom.js');
+    await concat(files, 'elements/test/test-custom.js');
 
-    await fs.copyFile('./dist/angularElementsTest/styles.css', 'elements/styles.css')
+    await fs.copyFile('./dist/angularElementsTest/styles.css', 'elements/test/styles.css')
 
-    await fs.copy('./dist/angularElementsTest/assets/', 'elements/assets/' )
+    await fs.copy('./dist/angularElementsTest/assets/', 'elements/test/assets/' )
 
     await fs.copyFile('./test.html', 'elements/index.html')
 
-    await fs.copyFile('src/favicon.ico', 'elements/favicon.ico')
+    await fs.copyFile('src/favicon.ico', 'elements/test/favicon.ico')
     
 })()
